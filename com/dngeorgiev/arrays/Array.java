@@ -55,6 +55,26 @@ public class Array {
         return currentMax;
     }
 
+    public int[] intersect(int[] otherArray) {
+        int[] foundItems = new int[otherArray.length];
+        int numberOfFoundItems = 0;
+
+        for (int i = 0; i < otherArray.length; i++) {
+            for (int j = 0; j < _currentSize; j++) {
+                if (_items[j] == otherArray[i]) {
+                    foundItems[numberOfFoundItems++] = otherArray[i];
+                    break;
+                }
+            }
+        }
+
+        int[] reducedFoundItems = new int[numberOfFoundItems];
+        for (int i = 0; i < numberOfFoundItems; i++) {
+            reducedFoundItems[i] = foundItems[i];
+        }
+        return reducedFoundItems;
+    }
+
     public void print() {
         for (int i = 0; i < _currentSize; i++) {
             System.out.println(_items[i]);

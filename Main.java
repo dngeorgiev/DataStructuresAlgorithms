@@ -1,5 +1,7 @@
 import com.dngeorgiev.arrays.Array;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Array numbers = new Array(3);
@@ -16,5 +18,8 @@ public class Main {
         System.out.println("Index of 69: " + numbers.indexOf(69));
 
         System.out.println("Max number is: " + numbers.max());
+
+        int[] arrayToIntersect = { 1, 420, 69 };
+        System.out.println("Common items: " + Arrays.toString(numbers.intersect(arrayToIntersect)));
     }
 }
