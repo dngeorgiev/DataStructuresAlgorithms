@@ -73,6 +73,15 @@ public class Array {
         return reducedFoundItems;
     }
 
+    public void reverse() {
+        int[] reversedArray = new int[_currentSize];
+        for (int i = 0; i < _currentSize; i++) {
+            reversedArray[i] = _items[_currentSize - i - 1];
+        }
+
+        _items = reversedArray;
+    }
+
     public void print() {
         for (int i = 0; i < _currentSize; i++) {
             System.out.println(_items[i]);
