@@ -8,6 +8,8 @@ public class Main {
         numbers.insert(30);
         numbers.insert(420);
         numbers.insert(69);
+
+        numbers.removeAt(4);
         numbers.print();
     }
 }

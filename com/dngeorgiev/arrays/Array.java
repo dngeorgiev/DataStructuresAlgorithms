@@ -18,6 +18,18 @@ public class Array {
         _items[_currentSize++] = item;
     }
 
+    public void removeAt(int index) {
+        if (index < 0 || index >= _currentSize) {
+            throw new IllegalArgumentException();
+        }
+
+        for (int i = index; i < _currentSize; i++) {
+            _items[i] = _items[i + 1];
+        }
+
+        _currentSize--;
+    }
+
     public void print() {
         for (int i = 0; i < _currentSize; i++) {
             System.out.println(_items[i]);
