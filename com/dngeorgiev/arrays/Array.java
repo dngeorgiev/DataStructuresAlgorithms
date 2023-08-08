@@ -59,19 +59,17 @@ public class Array {
         int[] foundItems = new int[otherArray.length];
         int numberOfFoundItems = 0;
 
-        for (int i = 0; i < otherArray.length; i++) {
+        for (int k : otherArray) {
             for (int j = 0; j < _currentSize; j++) {
-                if (_items[j] == otherArray[i]) {
-                    foundItems[numberOfFoundItems++] = otherArray[i];
+                if (_items[j] == k) {
+                    foundItems[numberOfFoundItems++] = k;
                     break;
                 }
             }
         }
 
         int[] reducedFoundItems = new int[numberOfFoundItems];
-        for (int i = 0; i < numberOfFoundItems; i++) {
-            reducedFoundItems[i] = foundItems[i];
-        }
+        System.arraycopy(foundItems, 0, reducedFoundItems, 0, numberOfFoundItems);
         return reducedFoundItems;
     }
 

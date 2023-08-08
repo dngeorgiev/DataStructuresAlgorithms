@@ -21,5 +21,13 @@ public class Main {
 
         int[] arrayToIntersect = { 1, 420, 69 };
         System.out.println("Common items: " + Arrays.toString(numbers.intersect(arrayToIntersect)));
+
+        System.out.println("Reversing array...");
+        numbers.reverse();
+        numbers.print();
+
+        numbers.insertAt(69, 3);
+
+        numbers.print();
     }
 }
