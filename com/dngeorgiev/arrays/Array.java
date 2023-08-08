@@ -30,6 +30,16 @@ public class Array {
         _currentSize--;
     }
 
+    public int indexOf(int item) {
+        for (int i = 0; i < _currentSize; i++) {
+            if (_items[i] == item) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
     public void print() {
         for (int i = 0; i < _currentSize; i++) {
             System.out.println(_items[i]);

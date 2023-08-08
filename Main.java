@@ -11,5 +11,8 @@ public class Main {
 
         numbers.removeAt(4);
         numbers.print();
+
+        System.out.println("Index of 420: " + numbers.indexOf(420));
+        System.out.println("Index of 69: " + numbers.indexOf(69));
     }
 }
