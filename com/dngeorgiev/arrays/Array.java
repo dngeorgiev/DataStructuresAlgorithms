@@ -82,6 +82,14 @@ public class Array {
         _items = reversedArray;
     }
 
+    public void insertAt(int item, int index) {
+        if (index < 0 || index >= _currentSize) {
+            throw new IllegalArgumentException();
+        }
+
+        _items[index] = item;
+    }
+
     public void print() {
         for (int i = 0; i < _currentSize; i++) {
             System.out.println(_items[i]);

@@ -25,5 +25,8 @@ public class Main {
         System.out.println("Reversing array...");
         numbers.reverse();
         numbers.print();
+
+        numbers.insertAt(69, 3);
+        numbers.print();
     }
 }
