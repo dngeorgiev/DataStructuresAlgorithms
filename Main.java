@@ -14,5 +14,7 @@ public class Main {
 
         System.out.println("Index of 420: " + numbers.indexOf(420));
         System.out.println("Index of 69: " + numbers.indexOf(69));
+
+        System.out.println("Max number is: " + numbers.max());
     }
 }

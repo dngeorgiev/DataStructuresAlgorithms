@@ -40,6 +40,21 @@ public class Array {
         return -1;
     }
 
+    public int max() {
+        if (_currentSize == 0) {
+            throw new UnsupportedOperationException("Can't get max item when array is empty.");
+        }
+
+        int currentMax = _items[0];
+        for (int i = 1; i < _currentSize; i++) {
+            if (_items[i] > currentMax) {
+                currentMax = _items[i];
+            }
+        }
+
+        return currentMax;
+    }
+
     public void print() {
         for (int i = 0; i < _currentSize; i++) {
             System.out.println(_items[i]);
